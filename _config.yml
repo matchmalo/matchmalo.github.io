@@ -1,23 +1,23 @@
 title:              Matchmalo Blog
-email:              matchmalo.marketing@gmail.com
+email:              hello@matchmalo.com
 description:        A Blog Theme by Start Bootstrap
 author:             Ulrich Medenou
 baseurl:            ""
-url:                "https://matchmalo.github.io"
+url:                "https://blog.matchmalo.com"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
-instagram_username:  
-linkedin_username:
+twitter_username: matchmalo
+github_username:    
+facebook_username:  
+instagram_username:  matchmalo
+linkedin_username: company/matchmalo
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
-paginate:           5
+paginate:           6
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed

@@ -4,30 +4,37 @@ title: Posts
 background: '/img/bg-post.jpg'
 ---
 
-{% for post in paginator.posts %}
+<div class="row">
+  {% for post in paginator.posts %}
+  <div class="col-6">
+    <article class="post-preview">
+      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+        <div class="row">
+          <div class="col"><img class="img-fluid" src="{{post.background}}"></div>
+          <div class="col"><h3 class="post-title">{{ post.title }}</h3></div>
+        </div>
+      </a>
+      {% if post.subtitle %}
+        <p class="mb-0">{{ post.subtitle }}</p>
+        {% else %}
+        <p class="mb-0">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+        {% endif %}
+      <p class="post-meta">Posted by
+        {% if post.author %}
+        {{ post.author }}
+        {% else %}
+        {{ site.author }}
+        {% endif %}
+        on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+      </p>
+    </article>
+  </div>
 
-<article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
-    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-    {% endif %}
-  </a>
-  <p class="post-meta">Posted by
-    {% if post.author %}
-    {{ post.author }}
-    {% else %}
-    {{ site.author }}
-    {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-  </p>
-</article>
+<!--<hr>-->
 
-<hr>
+  {% endfor %}
+</div>
 
-{% endfor %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
