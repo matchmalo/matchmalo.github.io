@@ -10,23 +10,28 @@ background: '/img/bg-post.jpg'
     <article class="post-preview">
       <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
         <div class="row">
-          <div class="col"><img class="img-fluid" src="{{post.background}}"></div>
-          <div class="col"><h3 class="post-title">{{ post.title }}</h3></div>
+          <div class="col-12"><img class="img-fluid" style="border-radius: 2.5rem;" src="{{post.background}}"></div>
+          <div class="col-12"><h3 class="post-title mt-3">{{ post.title }}</h3></div>
         </div>
       </a>
       {% if post.subtitle %}
-        <p class="mb-0">{{ post.subtitle }}</p>
+        <p class="my-3">{{ post.subtitle }}</p>
         {% else %}
-        <p class="mb-0">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+        <p class="my-3">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
         {% endif %}
-      <p class="post-meta">Posted by
-        {% if post.author %}
-        {{ post.author }}
-        {% else %}
-        {{ site.author }}
-        {% endif %}
-        on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-      </p>
+        <div class="row">
+          <div class="col-3"><img class="rounded-circle" src="/img/posts/Author/Ulrich Medenou.jpg"></div>
+          <div class="col">
+            <p class="post-meta my-2">
+              {% if post.author %}
+              {{ post.author }} <br>
+              {% else %}
+              {{ site.author }} <br>
+              {% endif %}
+              {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+            </p>
+          </div>
+        </div>
     </article>
   </div>
 

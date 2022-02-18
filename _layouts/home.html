@@ -4,7 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead" style="background:#00CFC3;">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -13,10 +13,8 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
+            <h1><img src="/img/Matchmalo_logo.png"></h1>
+            <span class="subheading">All about how to grow your business at the lowest acquisition cost.</span>
           </div>
         </div>
       </div>
@@ -36,23 +34,28 @@ layout: default
             <article class="post-preview">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                 <div class="row">
-                  <div class="col"><img class="img-fluid" src="{{post.background}}"></div>
-                  <div class="col"><h3 class="post-title">{{ post.title }}</h3></div>
+                  <div class="col-12"><img class="img-fluid" style="border-radius: 2.5rem;" src="{{post.background}}"></div>
+                  <div class="col-12"><h3 class="post-title mt-3">{{ post.title }}</h3></div>
                 </div>
               </a>
               {% if post.subtitle %}
-                <p class="mb-0">{{ post.subtitle }}</p>
+                <p class="my-3">{{ post.subtitle }}</p>
                 {% else %}
-                <p class="mb-0">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+                <p class="my-3">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
                 {% endif %}
-              <p class="post-meta">Posted by
-                {% if post.author %}
-                {{ post.author }}
-                {% else %}
-                {{ site.author }}
-                {% endif %}
-                on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-              </p>
+                <div class="row">
+                  <div class="col-3"><img class="rounded-circle" src="/img/posts/Author/Ulrich Medenou.jpg"></div>
+                  <div class="col">
+                    <p class="post-meta my-2">
+                      {% if post.author %}
+                      {{ post.author }} <br>
+                      {% else %}
+                      {{ site.author }} <br>
+                      {% endif %}
+                      {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+                    </p>
+                  </div>
+                </div>
             </article>
           </div>
           <!--<hr>-->
