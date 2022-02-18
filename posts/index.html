@@ -6,7 +6,7 @@ background: '/img/bg-post.jpg'
 
 <div class="row">
   {% for post in paginator.posts %}
-  <div class="col-6">
+  <div class="col-12 col-md-6">
     <article class="post-preview">
       <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
         <div class="row">
