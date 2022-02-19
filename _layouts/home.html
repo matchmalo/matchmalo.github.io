@@ -13,7 +13,7 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1><img src="/img/Matchmalo_logo.png"></h1>
+            <h1><img class="img-fluid" src="/img/Matchmalo_logo.png"></h1>
             <span class="subheading">All about how to grow your business at the lowest acquisition cost.</span>
           </div>
         </div>
@@ -34,7 +34,7 @@ layout: default
             <article class="post-preview">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                 <div class="row">
-                  <div class="col-12"><img class="img-fluid" alt="B2B brand collaboration" style="border-radius: 2.5rem;" src="{{post.background}}"></div>
+                  <div class="col-12"><img class="img-fluid" alt="B2B brand collaboration" src="{{post.backgroundList}}"></div>
                   <div class="col-12"><h3 class="post-title mt-3">{{ post.title }}</h3></div>
                 </div>
               </a>
@@ -43,8 +43,8 @@ layout: default
                 {% else %}
                 <p class="my-3">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
                 {% endif %}
-                <div class="row">
-                  <div class="col-3"><img class="rounded-circle" src="/img/posts/Author/Ulrich Medenou.jpg"></div>
+                <div class="row align-items-center">
+                  <div class="col-3"><img class="rounded-circle img-author" src="/img/posts/Author/Ulrich Medenou.jpg"></div>
                   <div class="col">
                     <p class="post-meta my-2">
                       {% if post.author %}

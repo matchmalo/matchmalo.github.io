@@ -1,4 +1,10 @@
 // Styling for the post page
+.img-author{
+    width: 38px !important;
+}
+.post-meta{
+    font-size: 14px !important;
+}
 .post-preview {
     >a {
         color: $gray-900;
