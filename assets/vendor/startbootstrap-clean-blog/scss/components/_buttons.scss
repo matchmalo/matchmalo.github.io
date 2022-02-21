@@ -12,11 +12,12 @@
 .btn-primary {
     background-color: #F9CF39;
     border-color: #F9CF39;
+    color: #141414;
 
     &:hover,
     &:focus,
     &:active {
-        color: #141414;
+        color: $white;
         background-color: darken($primary, 7.5) !important;
         border-color: darken($primary, 7.5) !important;
     }
