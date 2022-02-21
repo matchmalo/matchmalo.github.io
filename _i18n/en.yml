@@ -1,0 +1,16 @@
+global:
+  tagline: English
+langs:
+  en: English
+  fr: French
+pages:
+  home: home
+  website: website
+  matchbot: matchbot
+  about: about
+  contact: contact
+translation:
+  subtitleHome : All about how to grow your business at the lowest acquisition cost.
+  newer: Newer
+  older: Older
+  textContact: Need help growing your business with powerful partnership marketing strategies? Send us a message and we will contact you as soon as possible.

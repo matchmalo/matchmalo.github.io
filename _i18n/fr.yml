@@ -1,0 +1,16 @@
+global:
+  tagline: Français
+langs:
+  en: Anglais
+  fr: Français
+pages:
+  home: acceuil
+  website: site web
+  matchbot: matchbot
+  about: a propos
+  contact: nous contacter
+translation:
+  subtitleHome : Tout sur la façon de développer votre entreprise au moindre coût d'acquisition.  
+  newer: Plus récent
+  older: Plus ancien
+  textContact: Besoin d'aide pour développer votre entreprise avec de puissantes stratégies de marketing de partenariat ? Envoyez-nous un message et nous vous contacterons dès que possible.
