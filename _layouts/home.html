@@ -52,7 +52,12 @@ layout: default
               {% else %}
               {{ site.author }} <br>
               {% endif %}
-              {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+              {% if site.lang == "fr" %}
+              <time datetime="{{ post.date | html5date }}">{{ post.date | frenchDate }}</time> 
+              {% else %}
+              {{ post.date | date: '%B %d, %Y' }} 
+              {% endif %}
+              &middot; {% include read_time.html content=post.content %}
             </p>
           </div>
         </div>

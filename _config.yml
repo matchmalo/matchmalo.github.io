@@ -25,7 +25,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   - jekyll-multiple-languages-plugin
+  - jekyll-liquify
 
 languages: ["en", "fr"]
 exclude_from_localizations: ["img", "assets"]
-default_locale_in_subfolder: true

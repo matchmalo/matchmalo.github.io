@@ -5,12 +5,13 @@ langs:
   fr: Français
 pages:
   home: acceuil
-  website: site web
-  matchbot: matchbot
-  about: a propos
-  contact: nous contacter
+  website: SITE WEB
+  matchbot: MATCHBOT
+  about: A PROPOS
+  contact: CONTACT
 translation:
-  subtitleHome : Tout sur la façon de développer votre entreprise au moindre coût d'acquisition.  
+  subtitleHome : Des astuces actionnables pour développer votre business à moindre coûts  
   newer: Plus récent
   older: Plus ancien
-  textContact: Besoin d'aide pour développer votre entreprise avec de puissantes stratégies de marketing de partenariat ? Envoyez-nous un message et nous vous contacterons dès que possible.
+  contactUs : Nous contacter
+  textContact: Vous cherchez à developper votre entreprise avec un budget réduit mais en utilisant des stratégies puissants comme de la collaboration entre marques ? Envoyez-nous un message et nous vous contacterons dans les plus brefs délais. 

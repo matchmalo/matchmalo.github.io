@@ -27,7 +27,7 @@
         </li>
         <li class="nav-item">
           {% if site.lang == "fr" %}
-          {% capture link1 %}{{ site.baseurl_root }}/en{{ page.url}}{% endcapture %}
+          {% capture link1 %}{{ page.url}}{% endcapture %}
           <a href="{{ link1 }}"><img class="mr-2" style="width:28px;" src="{{"/img/flag/English.svg" | site.baseurl_root }}">{% t langs.en %}</a>
           {% elsif site.lang == "en" %}
           {% capture link2 %}{{ site.baseurl_root }}/fr{{ page.url }}{% endcapture %}
